@@ -1,0 +1,29 @@
+import React from "react";
+import styled from "@emotion/styled";
+import { IoLogoInstagram, IoLogoTwitter, IoLogoGithub, IoMailOutline } from "react-icons/io5";
+
+const LinkList = styled.div`
+text-align: center;
+`;
+
+const Link = styled.h3`
+font-size: 20px;
+color: #64ffda;
+`;
+
+const OnTheWeb = () =>{
+    return(
+        <>
+        <h2>On the web</h2>
+        <LinkList>
+            <Link><IoLogoGithub></IoLogoGithub><a href="https://github.com/bochainwu" target="_blank">  @bochainwu</a></Link>
+            <Link><IoLogoTwitter></IoLogoTwitter><a href="https://twitter.com/bochianwu" target="_blank">  @bochainwu</a></Link>
+            <Link><IoLogoInstagram></IoLogoInstagram><a href="https://twitter.com/bochianwu" target="_blank">  @bochainwu</a></Link>
+            <Link><IoMailOutline></IoMailOutline><a href="mailto:bochainwu@gmail.com" target="_blank"> Say Hello👋to me</a></Link>
+            
+        </LinkList>
+        </>
+    );
+};
+
+export default OnTheWeb;
