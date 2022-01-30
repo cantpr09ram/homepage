@@ -8,8 +8,11 @@ const Name = styled.h1`
     
 `;
 const Career = styled.p`
-    backgroung-color: #)a192f;
-    padding-left: 30px;
+    font-size: 5px;
+    background-color: #696969;
+    text-align: center;
+    padding: 15px;
+    border-radius:10px;
 `;
 
 const Hello = () =>{

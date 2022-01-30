@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { IoLogoInstagram, IoLogoTwitter, IoLogoGithub, IoMailOutline } from "react-icons/io5";
 
 const LinkList = styled.div`
-text-align: center;
+padding-left:10%;
 `;
 
 const Link = styled.h3`
