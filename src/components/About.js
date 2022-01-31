@@ -54,7 +54,7 @@ const PicWarper = styled.img`
     border-radius:20px;
     margin-bottom: 8px;
 `;
-const school_url = "http://www.bwjh.ylc.edu.tw/";
+//const school_url = "http://www.bwjh.ylc.edu.tw/";
 
 //
 const About = (props) => {
