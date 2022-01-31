@@ -8,6 +8,7 @@ const Name = styled.h1`
     
 `;
 const Career = styled.p`
+    flexWrap: "wrap";
     font-size: 5px;
     background-color: #696969;
     text-align: center;

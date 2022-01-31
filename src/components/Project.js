@@ -1,10 +1,8 @@
 import React from "react";
 import styled  from "@emotion/styled";
-import projectArr from '../project.json';
-
-
 
 const Container = styled.div`
+    padding-bottom: 20px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat( ${({ size }) => (size === "tablet" ? '1' : '2')}, minmax(5px, 1fr));
@@ -17,9 +15,7 @@ const ProjectCard = styled.header`
     color: #FFFAFA;
     border-radius:10px;
     padding: 20px;
-    line-height:50px;
-    word-wrap:break-word; 
-    word-break:break-all; 
+    line-height:50px; 
     overflow: hidden;
 `;
 const ProjectName = styled.div`
@@ -28,37 +24,52 @@ const ProjectName = styled.div`
 const ProjectDescription = styled.div`
     text-align: left;
     line-height:20px;
-    font-size: 10px;
+    font-size: 16px;
     `;
 const ProjectLanguage = styled.div`
+    line-height: 24px;
     text-align: left;
     font-size: 10px`;
 const TechStack = styled.div`
+    line-height: 24px;
     text-align: left;
     font-size: 10px`;
-const ProjectUrl = styled.div`
+const ProjectUrl = styled.a`
 `;
-
-const project_length = projectArr.length;
-const counters = Array.from({ length: project_length }, (_, index) => index);
-
-
 
 const Project = (props) =>{
     const size = props.wininfo;
+
+    const projects = {
+        "homepage": {
+          desc:
+            "My personal website.",
+          techStack: "javascript(React.js), emotion",
+          link: "https://github.com/bochainwu/homepage",
+        },
+        "spotify_crawler": {
+          desc:
+            "A spotify top 50 crawler.",
+          techStack: "python, beauthfulsoup, urllib, datetime",
+          link: "https://github.com/bochainwu/potify_crawler",
+        }
+        
+    };
+    
     return(
         <>
             <h2>Project</h2>
             <Container size={size}>
-            {counters.map(item => 
-                <ProjectUrl>
-                <ProjectCard key="{item}">
-                    <ProjectName>test</ProjectName>
-                    <ProjectDescription>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</ProjectDescription>
-                    <ProjectLanguage>python</ProjectLanguage>
-                    <TechStack>tensorflow</TechStack>
-                </ProjectCard>
-                </ProjectUrl>
+                {Object.keys(projects).map((key) =>(
+                    <ProjectUrl key={key} href={projects[key]["link"]}>
+                    <ProjectCard>
+                        <ProjectName >{key}</ProjectName>
+                        <ProjectDescription >{projects[key]["desc"]}</ProjectDescription>
+                        <ProjectLanguage >{projects[key]["language"]}</ProjectLanguage>
+                        <TechStack >{projects[key]["techStack"]}</TechStack>
+                    </ProjectCard>
+                    </ProjectUrl>
+                )
                 )}
             </Container>
         </>

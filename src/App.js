@@ -4,7 +4,6 @@ import Project from './components/Project'
 import OnTheWeb from './components/OnTheWeb'
 import Footer from'./components/Footer'
 import styled from '@emotion/styled';
-import { ThemeProvider } from '@emotion/react';
 import useRWD from "./components/useRWD";
 
 
@@ -18,7 +17,7 @@ const App = () => {
   return (
     <Theme >
       <Hello />
-      <About />
+      <About wininfo = {winsize} />
       <OnTheWeb />
       <Project wininfo = {winsize} />
       <Footer />

@@ -6,9 +6,7 @@ const useRWD=()=>{
     const handleRWD=()=>{
         if(window.innerWidth>=768)
             setMobile("PC");
-        else if (window.innerWidth>420)
-            setMobile("tablet");
-        else
+        else 
             setMobile("tablet");
     }
 
