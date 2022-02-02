@@ -17,6 +17,8 @@ const ProjectCard = styled.header`
     padding: 20px;
     line-height:50px; 
     overflow: hidden;
+    transform: translateY(0px);
+	transition: .5s;
 `;
 const ProjectName = styled.div`
     text-align: left;
@@ -29,11 +31,13 @@ const ProjectDescription = styled.div`
 const ProjectLanguage = styled.div`
     line-height: 24px;
     text-align: left;
-    font-size: 10px`;
+    font-size: 16px;
+    padding-top: 20px;`;
 const TechStack = styled.div`
     line-height: 24px;
     text-align: left;
-    font-size: 10px`;
+    font-size: 16px;
+    padding-top: 20px`;
 const ProjectUrl = styled.a`
 `;
 
@@ -44,13 +48,15 @@ const Project = (props) =>{
         "homepage": {
           desc:
             "My personal website.",
-          techStack: "javascript(React.js), emotion",
+          techStack: "React.js, emotion",
+          language: "javascript",
           link: "https://github.com/bochainwu/homepage",
         },
         "spotify_crawler": {
           desc:
             "A spotify top 50 crawler.",
-          techStack: "python, beauthfulsoup, urllib, datetime",
+          techStack: "beauthfulsoup, urllib, datetime",
+          language: "python",
           link: "https://github.com/bochainwu/potify_crawler",
         }
         
