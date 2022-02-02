@@ -7,20 +7,21 @@ const Name = styled.h1`
     text-align: center;
     
 `;
-const Career = styled.p`
-    flexWrap: "wrap";
-    font-size: 5px;
-    background-color: #696969;
+const Career = styled.div`
+    font-size: 16px;
     text-align: center;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-radius:10px;
+
+    
 `;
 
 const Hello = () =>{
     return(
         <>
             <Name>Hello👋 My name is Bo-chain</Name>
-            <Career>Student, junior-developer </Career>
+            <Career>I am a student/junior-developer </Career>
         </>
     );
 }

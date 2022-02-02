@@ -1,5 +1,6 @@
 import React from "react";
 import styled  from "@emotion/styled";
+import {Container1, Title} from "./Constants";
 
 const Container = styled.div`
     padding-bottom: 20px;
@@ -63,10 +64,10 @@ const Project = (props) =>{
     };
     
     return(
-        <>
-            <h2>Project</h2>
+        <Container1>
+             <Title size= {size}>Project</Title>
             <Container size={size}>
-                {Object.keys(projects).map((key) =>(
+            {Object.keys(projects).map((key) =>(
                     <ProjectUrl key={key} href={projects[key]["link"]}>
                     <ProjectCard>
                         <ProjectName >{key}</ProjectName>
@@ -77,8 +78,9 @@ const Project = (props) =>{
                     </ProjectUrl>
                 )
                 )}
+                
             </Container>
-        </>
+        </Container1>
         
         
     );

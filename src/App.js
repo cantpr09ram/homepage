@@ -18,7 +18,7 @@ const App = () => {
     <Theme >
       <Hello />
       <About wininfo = {winsize} />
-      <OnTheWeb />
+      <OnTheWeb wininfo = {winsize} />
       <Project wininfo = {winsize} />
       <Footer />
     </Theme>
