@@ -8,12 +8,13 @@
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
 </h3>
 
-# Stake
-
+# Techstake
+ - **[React.js](https://zh-hant.reactjs.org/)** : A JavaScript library for building user interfaces.
+ -  **[Emotion](https://emotion.sh/)** :  A library designed for writing css styles with JavaScript
 
 # 🧐 What's inside?
 ```text
-hmepage
+homepage
 ├──public
 |
 ├── src
@@ -23,14 +24,12 @@ hmepage
 |       ├── About.js
 |       ├── Project.js
 |       ├── OnTheWbe.js
-|       └── Footer.js    
+|       │── Footer.js    
+|       ├── Constants.js
+|       ├── useRWD.js
+|       └── img
 │          
 ├── .gitignore
 ├── LICENSE
 └── package.json
 ```
-- **Hello.js** 
-- **Aobut.js** 
-- **Project.js**
-- **OnTheWeb**
-- **Footer**
