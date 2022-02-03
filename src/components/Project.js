@@ -58,7 +58,7 @@ const Project = (props) =>{
             "A spotify top 50 crawler.",
           techStack: "beauthfulsoup, urllib, datetime",
           language: "python",
-          link: "https://github.com/bochainwu/potify_crawler",
+          link: "https://github.com/bochainwu/sotify_crawler",
         }
         
     };
