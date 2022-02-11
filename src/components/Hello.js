@@ -1,27 +1,38 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import {Container2, Title, AboutInfo, AboutText, AboutPic} from './Constants';
+import Lottie from 'react-lottie';
+import animationData from"../lottie/89032-victory-sign-baby-astronaut.json"
 
-const Name = styled.h1`
-    //background-color: #0a192f;
-    padding: 10px;
-    text-align: center;
-    
-`;
-const Career = styled.div`
-    font-size: 16px;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius:10px;
+const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
 
-    
-`;
 
-const Hello = () =>{
+const Hello = (props) => {
+    const size = props.wininfo;
     return(
         <>
-            <Name>Hello👋 My name is Bo-chain</Name>
-            <Career>I am a student/junior-developer </Career>
+        <Container2>
+            <AboutPic size={size} >
+            <Lottie 
+                    options={defaultOptions}
+                    height={240}
+                    width={240} 
+                />
+            </AboutPic>
+            <AboutInfo size={size}>
+                <AboutText>
+                    <Title size={size}>Hello👋</Title>
+                    <h3>My name is Bo-chain </h3>
+                    <h2>🧑‍🎓👨‍💻🧋👊</h2>
+                </AboutText>   
+            </AboutInfo>
+        </Container2>
         </>
     );
 }

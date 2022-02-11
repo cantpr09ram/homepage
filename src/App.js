@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <Theme >
-      <Hello />
+      <Hello wininfo = {winsize}/>
       <About wininfo = {winsize} />
       <OnTheWeb wininfo = {winsize} />
       <Project wininfo = {winsize} />
