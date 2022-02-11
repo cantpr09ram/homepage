@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const Container2 = styled.div`
     display: flex;
-    gap:50px;
+    gap:20px;
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 20px; 
@@ -13,7 +13,7 @@ const Container2 = styled.div`
     line-height:40px;
 `;
 
-const Title = styled.h6`
+const Title = styled.h1`
     text-align: ${({ size }) => (size === "tablet" ? 'center' : 'left')};
     font-size: 16px;
     font-size: 2em;
@@ -37,5 +37,34 @@ const Container1 = styled.div`
     line-height:40px;
 `;
 
+const AboutInfo = styled.div`
+    flex-basis: ${({ size }) => (size === "tablet" ? 'auto' : '60%')};
+    display: flex;
+    gap: 96px;
+    line-height: 24px;
+    flex-direction: column;
+    overflow: hidden;
+`;
 
-export {Container1, Container2, Title};
+const AboutText = styled.div`
+    align-items: center;
+    display: 'flex';
+    flex-basis: 40%;
+    flex-direction: column;
+    gap: 36px;
+`;
+
+const AboutPic = styled.div`
+    display: ${({ size }) => (size === "tablet" ? 'none' : 'flex')};
+    flex-basis: 60%;   
+    justify-content: center; 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+`;
+const PicWarper = styled.img`
+    border-radius:20px;
+    margin-bottom: 8px;
+`;
+
+export {Container1, Container2, Title, AboutInfo, AboutPic, AboutText, PicWarper};
